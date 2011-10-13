@@ -195,6 +195,11 @@ module ActiveRecord
           default_position == send(position_column)
         end
 
+        # Number of elements in the list
+        def size
+          bottom_position_in_list
+        end
+
         private
           def add_to_list_top
             increment_positions_on_all_items
